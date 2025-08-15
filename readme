@@ -1,0 +1,8 @@
+A rust actix-web /transform POST endpoint that takes two inputs in the body of a request:
+1. transform: with one of the following string values
+a. "uppercase"
+b. "lowercase"
+2. html: A string containing HTML text
+
+It transforms all the text content of <p> elements
+according to the transform given in the request
