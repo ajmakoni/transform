@@ -1,7 +1,10 @@
-use actix_web::{App, get, post, HttpResponse, HttpServer, Responder};
+use actix_web::{App, HttpResponse, HttpServer, Responder, get, post};
 
 #[actix_web::main]
-async fn main()->Result<(), std::io::Error> {
+async fn main() -> Result<(), std::io::Error> {
     println!("Hello, world!");
-    todo!()
+    HttpServer::new(|| App::new())
+        .bind("127.0.0.1:8080")?
+        .run()
+        .await
 }
